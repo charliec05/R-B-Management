@@ -1,0 +1,9 @@
+CREATE TABLE employees (
+    id BIGSERIAL PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    user_id BIGINT UNIQUE REFERENCES users(id) ON DELETE SET NULL
+);
+
+

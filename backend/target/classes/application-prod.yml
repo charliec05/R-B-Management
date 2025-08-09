@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://your-rds-endpoint:5432/rbmgmt}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+app:
+  aws:
+    region: ${AWS_REGION:us-east-1}
+    s3:
+      bucket: ${AWS_S3_BUCKET}
+    sqs:
+      queueUrl: ${AWS_SQS_QUEUE_URL}
+
+
